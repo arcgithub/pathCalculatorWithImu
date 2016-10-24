@@ -9,6 +9,10 @@ float delta_T = 0.01;
 float initial[3];
 bool isInitial = true;
 
+float distance_x = 0.0;
+float distance_y = 0.0;
+float distance_z = 0.0;
+
 ros::Subscriber sub_weg;
 ros::Publisher pub_weg;
 
@@ -53,9 +57,9 @@ void pathCalculator(const sensor_msgs::Imu::ConstPtr & datum){
 	// float ang_z = datum->angular_acceleration.z;
 
 	//Berechung der zurückgelegten Distanzen --> even. Trafo in unser Koordssystem
-	float distance_x = 0.5*acc_x*delta_T*delta_T;
-	float distance_y = 0.5*acc_y*delta_T*delta_T;
-	float distance_z = 0.5*acc_z*delta_T*delta_T;
+	distance_x += 0.5*acc_x*delta_T*delta_T;
+	distance_y += 0.5*acc_y*delta_T*delta_T;
+	distance_z += 0.5*acc_z*delta_T*delta_T;
 
 	geometry_msgs::Vector3 weg;
 	weg.x = distance_x;
