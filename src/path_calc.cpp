@@ -56,7 +56,7 @@ void pathCalculator(const sensor_msgs::Imu::ConstPtr & datum){
 	// float ang_y = datum->angular_acceleration.y;
 	// float ang_z = datum->angular_acceleration.z;
 
-	//Berechung der zurückgelegten Distanzen --> even. Trafo in unser Koordssystem
+	//Berechnung der zurückgelegten Distanzen --> even. Trafo in unser Koordssystem
 	distance_x += 0.5*acc_x*delta_T*delta_T;
 	distance_y += 0.5*acc_y*delta_T*delta_T;
 	distance_z += 0.5*acc_z*delta_T*delta_T;
@@ -71,7 +71,7 @@ void pathCalculator(const sensor_msgs::Imu::ConstPtr & datum){
  	ros::Duration waitingDuration(delta_T);
  	waitingDuration.sleep();
 
-	// std::cout << acc_x << " " << acc_y << " " << acc_z << std::endl;
+	//std::cout << acc_x << " " << acc_y << " " << acc_z << std::endl;
 	// std::cout << orientation_x<< " " << orientation_y << " " << orientation_z << std::endl;
 	// std::cout << ang_x << " " << ang_y << " " << ang_z << std::endl;
 	// std::cout << initial[0] << " " << initial[1] << " " << initial[2] << std::endl;

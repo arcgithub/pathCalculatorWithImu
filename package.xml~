@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
- ##	<name>pathcalculatorwithimu</name>
+ ##	<name>pathcalculatorWithImu</name>
  	<version>0.0.0</version>
  ## 	<description>The pathcalculator package</description>
 
