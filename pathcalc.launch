@@ -1,0 +1,8 @@
+<launch>
+	
+	<!--VI_Sensor -->
+	<node name="visensor_node" pkg="visensor_node" type="visensor_node" output="screen" />
+
+	<node name="path_calc" pkg="pathcalculatorwithimu" type="path_calc" output="screen" />
+
+</launch>
