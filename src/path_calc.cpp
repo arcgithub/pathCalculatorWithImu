@@ -71,6 +71,7 @@ void pathCalculator(const sensor_msgs::Imu::ConstPtr & datum){
  	ros::Duration waitingDuration(delta_T);
  	waitingDuration.sleep();
 
+ 	std::cout << distance_x << std::endl;
 	//std::cout << acc_x << " " << acc_y << " " << acc_z << std::endl;
 	// std::cout << orientation_x<< " " << orientation_y << " " << orientation_z << std::endl;
 	// std::cout << ang_x << " " << ang_y << " " << ang_z << std::endl;
